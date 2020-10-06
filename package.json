@@ -35,7 +35,7 @@
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && !suggestWidgetVisible"
 			},
 			{
 				"key": "Tab",
