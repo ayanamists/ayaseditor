@@ -2,8 +2,12 @@
 	"publisher": "ayanamists",
 	"name": "ayaseditor",
 	"displayName": "AyaSEditor",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ayanamists/ayaseditor"
+	},
 	"description": "scheme, racket, lisp editor",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -11,7 +15,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:ayaseditor.Return",
 		"onLanguage:scheme",
 		"onLanguage:racket"
 	],
@@ -35,12 +38,12 @@
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme || editorLangId == racket || editorLangId == lisp"
 			},
 			{
 				"key": "Tab",
 				"command": "ayaseditor.Tab",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && editorLangId == scheme || editorLangId == racket || editorLangId == lisp"
 			},
 			{
 				"key": "ctrl+\\",
