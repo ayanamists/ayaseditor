@@ -7,7 +7,7 @@
 		"url": "https://github.com/ayanamists/ayaseditor"
 	},
 	"description": "scheme, racket, lisp editor",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -38,12 +38,32 @@
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme || editorLangId == racket || editorLangId == lisp"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme"
+			},
+			{
+				"key": "Enter",
+				"command": "ayaseditor.Return",
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket"
+			},
+			{
+				"key": "Enter",
+				"command": "ayaseditor.Return",
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp"
 			},
 			{
 				"key": "Tab",
 				"command": "ayaseditor.Tab",
-				"when": "editorTextFocus && editorLangId == scheme || editorLangId == racket || editorLangId == lisp"
+				"when": "editorTextFocus && editorLangId == scheme"
+			},
+			{
+				"key": "Tab",
+				"command": "ayaseditor.Tab",
+				"when": "editorTextFocus && editorLangId == racket"
+			},
+			{
+				"key": "Tab",
+				"command": "ayaseditor.Tab",
+				"when": "editorTextFocus && editorLangId == lisp"
 			},
 			{
 				"key": "ctrl+\\",
