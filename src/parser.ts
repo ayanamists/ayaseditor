@@ -1,6 +1,4 @@
-import { timeStamp } from "console";
-import { statSync } from "fs";
-import { off } from "process";
+import * as vscode from "vscode";
 
 export {
   ParseResult, ParseSExp, ParseIds,
