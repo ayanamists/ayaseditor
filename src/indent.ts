@@ -22,6 +22,21 @@ class IndentListEle {
   }
 }
 
+let indentCache: { [id: string]: number } = {};
+function AddIndentCache(params: string, indent: number) {
+  indentCache[params] = indent;
+}
+
+function GetIndentCache(params: string) {
+  let a = indentCache[params];
+  if (a === undefined) {
+    return undefined;
+  }
+  return (list: IndentListEle[]) => {
+    return list[0].offset + a;
+  };
+}
+
 function TypicalDecide(list: IndentListEle[]) {
   let fisrt = list[0];
   if (isSpecialKey(fisrt.value)) {
@@ -50,6 +65,11 @@ function DecideIndent(list: IndentListEle[]) {
   if (fisrt.type === IndentEleType.SExpression) {
     return fisrt.offset;
   } else {
+    let cache = GetIndentCache(fisrt.value);
+    if (cache !== undefined) {
+      return cache(list);
+    }
+
     let typicalResult = TypicalDecide(list);
     let success = CheckIndentType(list, typicalResult);
     if (success) {
@@ -122,10 +142,13 @@ function IndentScheme4(list: IndentListEle[]) {
   while (nowPosReg > 0) {
     let now = list[nowPosReg];
     if (now.line !== formalReg.line) {
-      return formalReg.offset;
+      break;
     } else {
       formalReg = now;
     }
   }
+
+  let realOffset = formalReg.offset - list[0].offset;
+  AddIndentCache(list[0].value, realOffset);
   return formalReg.offset;
 }
