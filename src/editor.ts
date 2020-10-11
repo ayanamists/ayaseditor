@@ -106,6 +106,7 @@ function ParseResultToIndentAst(posAfterFULB: vscode.Position,
     let resStr = (data[i].getType() === 0) ? data[i].getValue() : "";
     res.push(new Indent.IndentListEle(
       data[i].getType(),
+      line,
       getRealPos(posAfterFULB, line, row),
       resStr));
   }
