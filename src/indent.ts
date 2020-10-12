@@ -37,6 +37,12 @@ function GetIndentCache(params: string) {
   };
 }
 
+function RemoveIndentCache(params: string) {
+  let a = indentCache[params];
+  if (a !== undefined) {
+    delete indentCache[params];
+  }
+}
 function TypicalDecide(list: IndentListEle[]) {
   let fisrt = list[0];
   if (isSpecialKey(fisrt.value)) {
@@ -93,6 +99,8 @@ function DecideIndent(list: IndentListEle[]) {
       let cacheRes = cache(list);
       if (IfUseCache(list)) {
         return cacheRes;
+      } else {
+        RemoveIndentCache(list[0].value);
       }
     }
 
