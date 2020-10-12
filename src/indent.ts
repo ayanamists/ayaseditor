@@ -52,11 +52,18 @@ function TypicalDecide(list: IndentListEle[]) {
 }
 
 function CheckIndentType(params: IndentListEle[], intent: number) {
+  var lineReg = params[1].line;
   for (var i = 2; i < params.length; ++i) {
-    if (params[i].offset !== intent) {
-      return false;
+    if (lineReg !== params[i].line) {
+      if (params[i].offset !== intent) {
+        return false;
+      }
+      else {
+        lineReg = params[i].line;
+      }
     }
   }
+
   return true;
 }
 
