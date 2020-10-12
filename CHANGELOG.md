@@ -4,6 +4,10 @@ All notable changes to the "ayaseditor" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.1]
+
+修正了可能出现无限循环的问题
+
 ## [0.1.0]
 
 加入了用户修改的记忆化功能

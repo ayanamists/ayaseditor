@@ -146,6 +146,7 @@ function IndentScheme4(list: IndentListEle[]) {
     } else {
       formalReg = now;
     }
+    nowPosReg--;
   }
 
   let realOffset = formalReg.offset - list[0].offset;
