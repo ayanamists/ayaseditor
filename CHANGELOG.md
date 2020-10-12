@@ -4,6 +4,10 @@ All notable changes to the "ayaseditor" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.3]
+
+修正了缓存策略过于激进的问题
+
 ## [0.1.2]
 
 修正了同一行的缩进会被不正确识别的问题

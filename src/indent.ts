@@ -67,6 +67,22 @@ function CheckIndentType(params: IndentListEle[], intent: number) {
   return true;
 }
 
+// 只有当所有元素在同一行时才使缓存生效
+function IfUseCache(list: IndentListEle[]) {
+  if (list.length === 1) {
+    return true;
+  } else {
+    let line = list[0].line;
+    for (var i = 0; i < list.length; ++i) {
+      if (list[i].line !== line) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+}
+
 function DecideIndent(list: IndentListEle[]) {
   let fisrt = list[0];
   if (fisrt.type === IndentEleType.SExpression) {
@@ -74,7 +90,10 @@ function DecideIndent(list: IndentListEle[]) {
   } else {
     let cache = GetIndentCache(fisrt.value);
     if (cache !== undefined) {
-      return cache(list);
+      let cacheRes = cache(list);
+      if (IfUseCache(list)) {
+        return cacheRes;
+      }
     }
 
     let typicalResult = TypicalDecide(list);
