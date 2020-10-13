@@ -4,6 +4,10 @@ All notable changes to the "ayaseditor" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.5]
+
+修正了s表达式长度小于2出现错误的问题
+
 ## [0.1.4]
 
 修正了缓存策略过于激进的问题

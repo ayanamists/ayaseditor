@@ -58,6 +58,10 @@ function TypicalDecide(list: IndentListEle[]) {
 }
 
 function CheckIndentType(params: IndentListEle[], intent: number) {
+  if (params.length < 2) {
+    return true;
+  }
+
   var lineReg = params[1].line;
   for (var i = 2; i < params.length; ++i) {
     if (lineReg !== params[i].line) {
@@ -129,6 +133,7 @@ function IndentSchemeNormal(list: IndentListEle[]) {
   if (list.length === 1) {
     return list[0].offset;
   } else {
+    AddIndentCache(list[0].value, list[1].offset - list[0].offset);
     return list[1].offset;
   }
 }
