@@ -7,7 +7,7 @@
 		"url": "https://github.com/ayanamists/ayaseditor"
 	},
 	"description": "scheme, racket, lisp editor",
-	"version": "0.1.5",
+	"version": "0.1.6",
 	"engines": {
 		"vscode": "^1.49.0"
 	},
@@ -38,17 +38,32 @@
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme && (!vim.active || vim.mode == 'Insert')"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme && !vim.active"
 			},
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket && (!vim.active || vim.mode == 'Insert')"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme && vim.mode == 'Insert'"
 			},
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp && (!vim.active || vim.mode == 'Insert')"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket && !vim.active"
+			},
+			{
+				"key": "Enter",
+				"command": "ayaseditor.Return",
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket && vim.mode == 'Insert'"
+			},
+			{
+				"key": "Enter",
+				"command": "ayaseditor.Return",
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp && !vim.active"
+			},
+			{
+				"key": "Enter",
+				"command": "ayaseditor.Return",
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp && vim.mode == 'Insert'"
 			},
 			{
 				"key": "Tab",

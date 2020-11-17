@@ -3,7 +3,7 @@ import { off } from 'process';
 import * as vscode from 'vscode';
 import { isSelectKey, isSpecialKey } from './lang';
 import * as Parser from './parser';
-import * as Indent from "./Indent";
+import * as Indent from "./indent";
 
 export { ReturnAction, TabAction };
 
