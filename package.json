@@ -38,17 +38,17 @@
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme && (!vim.active || vim.mode == 'Insert')"
 			},
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket && (!vim.active || vim.mode == 'Insert')"
 			},
 			{
 				"key": "Enter",
 				"command": "ayaseditor.Return",
-				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp && (!vim.active || vim.mode == 'Insert')"
 			},
 			{
 				"key": "Tab",
@@ -68,7 +68,7 @@
 			{
 				"key": "ctrl+\\",
 				"command": "ayaseditor.Insert",
-				"when": "editorTextFocus"
+				"when": "editorTextFocus && (!vim.active || vim.mode == 'Insert')"
 			}
 		]
 	},
