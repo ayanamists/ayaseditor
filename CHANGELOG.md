@@ -4,6 +4,10 @@ All notable changes to the "ayaseditor" extension will be documented in this fil
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.1.7]
+
+修正了补全模式和模板模式下Tab原有功能被覆盖的问题
+
 ## [0.1.6]
 
 修正了与vim插件的冲突

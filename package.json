@@ -68,17 +68,17 @@
 			{
 				"key": "Tab",
 				"command": "ayaseditor.Tab",
-				"when": "editorTextFocus && editorLangId == scheme"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == scheme && !inSnippetMode"
 			},
 			{
 				"key": "Tab",
 				"command": "ayaseditor.Tab",
-				"when": "editorTextFocus && editorLangId == racket"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == racket && !inSnippetMode"
 			},
 			{
 				"key": "Tab",
 				"command": "ayaseditor.Tab",
-				"when": "editorTextFocus && editorLangId == lisp"
+				"when": "editorTextFocus && !suggestWidgetVisible && editorLangId == lisp && !inSnippetMode"
 			},
 			{
 				"key": "ctrl+\\",
