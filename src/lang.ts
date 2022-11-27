@@ -1,11 +1,26 @@
 export { isSpecialKey, isSelectKey };
 
+let cs61aConfig = {
+  "specialKey": [
+    "define",
+    "let",
+    "lambda",
+    "define-macro",
+  ],
+  "selectKey": [
+    "if",
+    "cond"
+  ]
+}
+
 function isSpecialKey(str: string) {
-  let regex = /^((define.*)|(.*let.*)|syntax-rules|begin|call\/cc|(.*lambda.*)|(.*λ.*)|library|(.*case.*)|unless|(.*match.*))|λ$/;
-  return regex.test(str);
+  return getConfig().specialKey.includes(str)
 }
 
 function isSelectKey(str: string) {
-  let regex = /^(.*cond.*)|(.*if.*)$/;
-  return regex.test(str);
+  return getConfig().selectKey.includes(str)
+}
+
+function getConfig() {
+  return cs61aConfig
 }

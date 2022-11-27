@@ -76,7 +76,7 @@ function IndentSchemeSpecial(list: IndentListEle[]) {
   return list[0].offset + 1;
 }
 
-// if cond 等等（对称）选择关键字的情况：
+// cond 等等（对称）选择关键字的情况：
 // 如果是第二个，则关键字 + 1
 // 如果不是第二个，则与第二个统一缩进
 // (cond

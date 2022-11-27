@@ -22,13 +22,5 @@ suite('Test Lang', () => {
     assert(!res);
   }
   );
-  test('syntax', () => {
-    let str = 'define-syntax';
-    let res = lang.isSpecialKey(str);
-    assert(res);
-    let str2 = 'syntax-case';
-    let res2 = lang.isSpecialKey(str2);
-    assert(res2);
-  });
 }
 );
