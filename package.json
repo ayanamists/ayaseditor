@@ -9,7 +9,7 @@
 	"description": "scheme, racket, lisp editor",
 	"version": "0.1.7",
 	"engines": {
-		"vscode": "^1.49.0"
+		"vscode": "^1.73.1"
 	},
 	"categories": [
 		"Other"
