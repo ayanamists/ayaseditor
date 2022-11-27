@@ -2,6 +2,8 @@
 
 ## English
 
+**Note: now this ext only used for SICP course in NJU, r5rs/r6rs/racket feature is under development**
+
 This extension supports edit on s-expression.
 
 You can edit s-expression just like the DrRacket:
@@ -17,10 +19,6 @@ You can edit s-expression just like the DrRacket:
 - Press 'ctrl+\', and you get:
 
   ![3](https://pic.downk.cc/item/5f7b0fb9160a154a67b26540.gif)
-
-- If you don't like the default indent rule, just press `backspace` or `space` to change it. The extension will follow you. However, **you MUST press Enter again**, or this feature will not be invoked:
-  
-  ![4](https://pic.downk.cc/item/5f8270c31cd1bbb86b0de89f.gif)
 
 ## 中文版
 
