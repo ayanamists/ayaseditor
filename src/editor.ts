@@ -57,7 +57,7 @@ function searchForFULB(str: string) {
   return offset_reg;
 }
 
-// 得到第一个未闭合的左括号
+// found first unclosed left bracket 
 function getFULB(initpos: vscode.Position, a: vscode.TextEditor):
   [string, vscode.Position] | undefined {
 
