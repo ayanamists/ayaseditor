@@ -6,10 +6,39 @@ let cs61aConfig = {
     "let",
     "lambda",
     "define-macro",
+    // for Racket
+    "trace-define",
+    "define/contract",
+    "let*",
+    "let-values",
+    "let*-values",
+    "for",
+    "for/list",
+    "for/vector",
+    "for/hash",
+    "for/hasheq",
+    "for/hashalw",
+    "for/and",
+    "for/or",
+    "for/sum",
+    "for/product",
+    "for*",
+    "for*/list",
+    "for*/vector",
+    "for*/hash",
+    "for*/hasheq",
+    "for*/hashalw",
+    "for*/and",
+    "for*/or",
+    "for*/sum",
+    "for*/product",
   ],
   "selectKey": [
     "if",
-    "cond"
+    "cond",
+    // for Racket
+    "when",
+    "unless",
   ]
 }
 
